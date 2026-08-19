@@ -2,9 +2,11 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22004648.svg)](https://doi.org/10.5281/zenodo.22004648)
 
-**Especificação do Workloop Agêntico** · versão 0.1.0-rc4 (rascunho para revisão) · protocolo AISAC · B2 Tech
+**Especificação do Workloop Agêntico** · versão 0.1.0-rc5 (rascunho para revisão) · protocolo AISAC · B2 Tech
 
-> Liberdade dentro do loop, determinismo na costura.
+> Autonomia probabilística para pensar. Governança determinística para agir.
+>
+> Invariante: liberdade dentro do loop, gate determinístico em toda interface.
 
 Um **workloop agêntico** é um sistema de dois ou mais loops agênticos que interagem entre si por canais explícitos. Quando todos os participantes estão sob uma mesma autoridade de política (a organização que os criou), o workloop é **governado**: nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Quando o grafo cruza a fronteira da autoridade, o workloop é **aberto** e valem regras defensivas.
 

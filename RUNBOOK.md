@@ -14,10 +14,10 @@ Ordem recomendada. A maior parte é clique; o trabalho de verdade é o passo 0.
 cd workloop-spec
 git init -b main
 git add .
-git commit -m "Workloop Spec 0.1.0-rc4: rascunho para comentários"
+git commit -m "Workloop Spec 0.1.0-rc5: rascunho para comentários"
 git remote add origin https://github.com/brunobracaioli/workloop-spec.git   # repo criado vazio no site (sem README/.gitignore/licença)
 git push -u origin main
-git tag -a v0.1.0-rc4 -m "Workloop Spec 0.1.0-rc4"
+git tag -a v0.1.0-rc5 -m "Workloop Spec 0.1.0-rc5"
 git push --tags
 ```
 
@@ -40,7 +40,10 @@ git push --tags
 
 ## 3. Página canônica no domínio (Cloudflare, via MCP)
 
-- A página está no Worker `workloop-spec` com o domínio `workloop.b2tech.io` associado; republicar o HTML mantém a URL.
+- Arquitetura: o Worker `workloop-spec` serve o HTML a partir do R2 (objeto `workloop/index.html`, cache de 60 s); a arte do hero e o favicon também estão no R2 (`workloop/`). O layout vive em `template.html`; `build.py` injeta o conteúdo do `SPEC.md` nele.
+- Publicar nova versão: `python3 build.py` e suba `docs/index.html` para o R2 (presigned PUT via `create_upload_urls` do MCP Cloudflare, ou peça ao Claude). Não precisa redeploy do worker.
+- O projeto Cloudflare Pages `b2tech-workloop` (deploy paralelo de 19/08) ficou como backup e pode ser apagado.
+- Reverter para HTML embutido no worker: `publish_landing_page` com name `workloop-spec` e o HTML completo.
 - Regra: a URL canônica não muda nunca. Versões antigas continuam acessíveis pelo release no GitHub e pelo DOI de versão no Zenodo.
 
 ## 4. Livro

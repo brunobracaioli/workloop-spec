@@ -4,6 +4,14 @@ Todas as mudanças notáveis desta especificação são registradas aqui. O form
 
 ## [Unreleased]
 
+## [0.1.0-rc5] - 2026-08-19
+
+### Changed
+- Termo "costura" renomeado para "interface" em todo o texto normativo (DEF-4 e derivados), com nota em DEF-4 distinguindo de interface de programação ou de usuário.
+- Tese reformulada: "Autonomia probabilística para pensar. Governança determinística para agir." (seções 1 e 4 e página canônica).
+- Título da seção 4 passa a "liberdade dentro do loop, gate determinístico em toda interface"; abstract em inglês acompanha ("a deterministic gate at every interface").
+- Página canônica ganha a identidade visual AISAC (violeta/ciano, arte no hero, favicon, sumário recolhível no mobile); o layout vive em template.html e o build.py passa a preenchê-lo.
+
 ## [0.1.0-rc4] - 2026-08-18
 
 ### Added

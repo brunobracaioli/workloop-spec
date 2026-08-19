@@ -2,7 +2,7 @@
   "title": "Workloop Spec: Especificação do Workloop Agêntico",
   "upload_type": "publication",
   "publication_type": "technicalnote",
-  "description": "<p>Especificação do <strong>workloop agêntico</strong>: sistema de dois ou mais loops agênticos que interagem por canais explícitos sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Define termos, o invariante (\"liberdade dentro do loop, determinismo na costura\"), corolários, requisitos operacionais, o modo aberto (grafo que cruza a fronteira da autoridade) e critérios de conformidade. Parte do protocolo AISAC (B2 Tech).</p><p><em>English abstract included in the document.</em></p>",
+  "description": "<p>Especificação do <strong>workloop agêntico</strong>: sistema de dois ou mais loops agênticos que interagem por canais explícitos sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Define termos, o invariante (\"liberdade dentro do loop, gate determinístico em toda interface\"), corolários, requisitos operacionais, o modo aberto (grafo que cruza a fronteira da autoridade) e critérios de conformidade. Parte do protocolo AISAC (B2 Tech).</p><p><em>English abstract included in the document.</em></p>",
   "creators": [
     { "name": "Bracaioli, Bruno", "affiliation": "B2 Tech (Bracaioli Tecnologia)" }
   ],
@@ -10,6 +10,6 @@
   "license": "cc-by-4.0",
   "access_right": "open",
   "language": "por",
-  "version": "0.1.0-rc4",
+  "version": "0.1.0-rc5",
   "notes": "Texto normativo em português (Brasil), com abstract em inglês. Página canônica: https://workloop.b2tech.io"
 }
