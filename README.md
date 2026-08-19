@@ -1,6 +1,8 @@
 # Workloop Spec
 
-**Especificação do Workloop Agêntico** · versão 0.1.0-rc3 (rascunho para revisão) · protocolo AISAC · B2 Tech
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22004648.svg)](https://doi.org/10.5281/zenodo.22004648)
+
+**Especificação do Workloop Agêntico** · versão 0.1.0-rc4 (rascunho para revisão) · protocolo AISAC · B2 Tech
 
 > Liberdade dentro do loop, determinismo na costura.
 
@@ -12,7 +14,7 @@ Um **workloop agêntico** é um sistema de dois ou mais loops agênticos que int
 |---|---|
 | Texto normativo | [`SPEC.md`](SPEC.md) |
 | Página canônica | https://workloop.b2tech.io  |
-| DOI | *pendente (Zenodo)* |
+| DOI | [10.5281/zenodo.22004648](https://doi.org/10.5281/zenodo.22004648) |
 | Licença | [CC BY 4.0](LICENSE) |
 | Mudanças | [`CHANGELOG.md`](CHANGELOG.md) |
 | Como citar | [`CITATION.cff`](CITATION.cff) |
@@ -27,7 +29,7 @@ Rascunho para comentários (*Request for Comments*). Abra uma issue para propor 
 
 ## Como citar
 
-Bracaioli, B. (2026). *Workloop Spec: Especificação do Workloop Agêntico* (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: pendente. https://workloop.b2tech.io
+Bracaioli, B. (2026). *Workloop Spec: Especificação do Workloop Agêntico* (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: 10.5281/zenodo.22004648. https://workloop.b2tech.io
 
 ## Licenças
 

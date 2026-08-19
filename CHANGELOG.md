@@ -4,6 +4,11 @@ Todas as mudanças notáveis desta especificação são registradas aqui. O form
 
 ## [Unreleased]
 
+## [0.1.0-rc4] - 2026-08-18
+
+### Added
+- DOI reservado no Zenodo (10.5281/zenodo.22004648) na tabela do spec, na seção 12, no README (badge) e no CITATION.cff.
+
 ## [0.1.0-rc3] - 2026-08-18
 
 ### Added

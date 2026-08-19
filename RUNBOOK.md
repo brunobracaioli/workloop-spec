@@ -14,10 +14,10 @@ Ordem recomendada. A maior parte é clique; o trabalho de verdade é o passo 0.
 cd workloop-spec
 git init -b main
 git add .
-git commit -m "Workloop Spec 0.1.0-rc3: rascunho para comentários"
+git commit -m "Workloop Spec 0.1.0-rc4: rascunho para comentários"
 git remote add origin https://github.com/brunobracaioli/workloop-spec.git   # repo criado vazio no site (sem README/.gitignore/licença)
 git push -u origin main
-git tag -a v0.1.0-rc3 -m "Workloop Spec 0.1.0-rc3"
+git tag -a v0.1.0-rc4 -m "Workloop Spec 0.1.0-rc4"
 git push --tags
 ```
 

@@ -7,7 +7,7 @@ authors:
     given-names: Bruno
     affiliation: "B2 Tech (Bracaioli Tecnologia)"
     # orcid: "https://orcid.org/0000-0000-0000-0000"  # preencher se tiver ORCID
-version: 0.1.0-rc3
+version: 0.1.0-rc4
 date-released: 2026-08-18
 license: CC-BY-4.0
 url: "https://workloop.b2tech.io"
@@ -20,7 +20,7 @@ keywords:
   - deterministic gates
   - AI governance
   - AISAC
-# doi: "10.5281/zenodo.XXXXXXX"  # preencher após reservar/receber o DOI no Zenodo
+doi: "10.5281/zenodo.22004648"
 preferred-citation:
   type: standard
   title: "Workloop Spec: Especificação do Workloop Agêntico"
@@ -29,6 +29,6 @@ preferred-citation:
       given-names: Bruno
       affiliation: "B2 Tech (Bracaioli Tecnologia)"
   year: 2026
-  version: 0.1.0-rc3
+  version: 0.1.0-rc4
   url: "https://workloop.b2tech.io"
-  # doi: "10.5281/zenodo.XXXXXXX"
+  doi: "10.5281/zenodo.22004648"

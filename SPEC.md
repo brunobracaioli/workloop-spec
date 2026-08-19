@@ -4,12 +4,12 @@
 
 | | |
 |---|---|
-| Versão | 0.1.0-rc3 (rascunho para revisão) |
+| Versão | 0.1.0-rc4 (rascunho para revisão) |
 | Status | Draft · Request for Comments |
 | Data | 2026-08-18 |
 | Autor | Bruno Bracaioli · B2 Tech · protocolo AISAC |
 | URL canônica | https://workloop.b2tech.io |
-| DOI | pendente (Zenodo) |
+| DOI | https://doi.org/10.5281/zenodo.22004648 |
 | Licença | CC BY 4.0 |
 | Repositório | https://github.com/brunobracaioli/workloop-spec |
 
@@ -187,7 +187,7 @@ Uma empresa opera três loops:
 
 **Licença.** Este texto está licenciado sob Creative Commons Atribuição 4.0 Internacional (CC BY 4.0). Você pode copiar, redistribuir, adaptar e usar comercialmente, desde que atribua a autoria e indique alterações.
 
-**Como citar.** Bracaioli, B. (2026). *Workloop Spec: Especificação do Workloop Agêntico* (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: pendente. URL canônica: https://workloop.b2tech.io. Repositório: https://github.com/brunobracaioli/workloop-spec.
+**Como citar.** Bracaioli, B. (2026). *Workloop Spec: Especificação do Workloop Agêntico* (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: 10.5281/zenodo.22004648. URL canônica: https://workloop.b2tech.io. Repositório: https://github.com/brunobracaioli/workloop-spec.
 
 ## 13. Versionamento desta especificação
 

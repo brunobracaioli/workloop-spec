@@ -221,7 +221,7 @@ footer .sig{{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tr
 </div>
 
 <footer><div class="wrap">
-  <div class="cite"><p class="tag">Como citar</p>Bracaioli, B. (2026). <em>Workloop Spec: Especificação do Workloop Agêntico</em> ({esc(VERSION.split(' ')[0])}). B2 Tech / protocolo AISAC. DOI: {esc(DOI)}. {esc(URL.split(' ')[0])}</div>
+  <div class="cite"><p class="tag">Como citar</p>Bracaioli, B. (2026). <em>Workloop Spec: Especificação do Workloop Agêntico</em> ({esc(VERSION.split(' ')[0])}). B2 Tech / protocolo AISAC. DOI: <a href="{esc(DOI)}">{esc(DOI.replace("https://doi.org/",""))}</a>. {esc(URL.split(' ')[0])}</div>
   <p>Texto sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>. "Workloop" e "workloop agêntico" são termos do protocolo AISAC; use livremente, com atribuição. Não há marca registrada sobre o termo.</p>
   <p class="sig">WORKLOOP SPEC · {esc(sig_version)} · BRUNO BRACAIOLI · B2 TECH · AISAC</p>
 </div></footer>
