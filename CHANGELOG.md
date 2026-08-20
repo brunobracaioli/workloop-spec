@@ -4,6 +4,13 @@ Todas as mudanças notáveis desta especificação são registradas aqui. O form
 
 ## [Unreleased]
 
+### Added
+- Versão normativa em inglês (`SPEC.en.md`) como fonte padrão, com `SPEC.md` mantido como tradução pt-BR secundária.
+- Página secundária `docs/pt-br.html` e seletor de idioma na página canônica.
+
+### Changed
+- `docs/index.html`, README, metadados de citação e metadados do Zenodo passam a apresentar inglês como idioma padrão.
+
 ## [0.1.0-rc5] - 2026-08-19
 
 ### Changed

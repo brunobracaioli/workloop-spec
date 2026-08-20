@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "Se você usar ou citar esta especificação, cite-a como indicado abaixo (preferred-citation)."
-title: "Workloop Spec: Especificação do Workloop Agêntico"
-abstract: "Especificação do workloop agêntico: sistema de dois ou mais loops agênticos que interagem por canais explícitos sob uma autoridade de política, em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Define termos, invariante, corolários, requisitos operacionais e conformidade."
+message: "If you use or cite this specification, cite it as shown below (preferred-citation)."
+title: "Workloop Spec: Agentic Workloop Specification"
+abstract: "Specification for agentic workloops: systems of two or more agentic loops that interact through explicit channels under one policy authority, where no inter-loop interaction and no externally effecting action occurs without passing through a deterministic gate that enforces that authority's policies and business rules. Defines terms, invariant, corollaries, operational requirements, and conformance. Portuguese (Brazil) translation is included as a secondary language."
 authors:
   - family-names: Bracaioli
     given-names: Bruno
@@ -23,7 +23,7 @@ keywords:
 doi: "10.5281/zenodo.22004648"
 preferred-citation:
   type: standard
-  title: "Workloop Spec: Especificação do Workloop Agêntico"
+  title: "Workloop Spec: Agentic Workloop Specification"
   authors:
     - family-names: Bracaioli
       given-names: Bruno

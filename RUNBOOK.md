@@ -4,9 +4,9 @@ Ordem recomendada. A maior parte é clique; o trabalho de verdade é o passo 0.
 
 ## 0. Revisar e reescrever (você)
 
-- Leia `SPEC.md` inteiro e reescreva na sua voz o que quiser. Decida sobre REQ-1 a REQ-5 (estão marcados como propostos): manter, cortar ou mover.
+- Leia `SPEC.en.md` inteiro e reescreva na sua voz o que quiser. Mantenha `SPEC.md` sincronizado como tradução pt-BR secundária. Decida sobre REQ-1 a REQ-5 (estão marcados como propostos): manter, cortar ou mover.
 - Decididos: hostname canônico `workloop.b2tech.io` e repositório `github.com/brunobracaioli/workloop-spec`.
-- Depois de qualquer edição no `SPEC.md`, rode `python3 build.py` para regenerar `docs/index.html`.
+- Depois de qualquer edição em `SPEC.en.md` ou `SPEC.md`, rode `python3 build.py` para regenerar `docs/index.html` (inglês padrão) e `docs/pt-br.html` (pt-BR secundário).
 
 ## 1. Repositório público no GitHub
 
@@ -29,8 +29,8 @@ git push --tags
 **Rota A: DOI impresso no próprio texto do 0.1.0** (recomendada para a primeira versão):
 
 1. zenodo.org → login (pode ser com a conta GitHub) → **New upload** → clique em **Reserve DOI**. O DOI é reservado antes de publicar.
-2. Copie o DOI reservado para `SPEC.md` (tabela do topo e seção 12), `README.md`, `CITATION.cff` e `.zenodo.json`. Rode `build.py`, commit, crie o release `v0.1.0`.
-3. No upload do Zenodo: anexe o zip do release (`SPEC.md`, `docs/index.html`, `LICENSE`, `CITATION.cff`, `CHANGELOG.md`); tipo *Publication → Technical note*; título, autor, licença CC BY 4.0, versão 0.1.0, idioma português. **Publish**. O DOI vira ativo.
+2. Copie o DOI reservado para `SPEC.en.md` e `SPEC.md` (tabela do topo e seção 12), `README.md`, `CITATION.cff` e `.zenodo.json`. Rode `build.py`, commit, crie o release `v0.1.0`.
+3. No upload do Zenodo: anexe o zip do release (`SPEC.en.md`, `SPEC.md`, `docs/index.html`, `docs/pt-br.html`, `LICENSE`, `CITATION.cff`, `CHANGELOG.md`); tipo *Publication → Technical note*; título, autor, licença CC BY 4.0, versão 0.1.0, idioma inglês (com tradução pt-BR secundária). **Publish**. O DOI vira ativo.
 
 **Rota B: integração GitHub** (para todas as versões seguintes):
 
@@ -40,8 +40,8 @@ git push --tags
 
 ## 3. Página canônica no domínio (Cloudflare, via MCP)
 
-- Arquitetura: o Worker `workloop-spec` serve o HTML a partir do R2 (objeto `workloop/index.html`, cache de 60 s); a arte do hero e o favicon também estão no R2 (`workloop/`). O layout vive em `template.html`; `build.py` injeta o conteúdo do `SPEC.md` nele.
-- Publicar nova versão: `python3 build.py` e suba `docs/index.html` para o R2 (presigned PUT via `create_upload_urls` do MCP Cloudflare, ou peça ao Claude). Não precisa redeploy do worker.
+- Arquitetura: o Worker `workloop-spec` serve o HTML a partir do R2 (objeto `workloop/index.html`, cache de 60 s); a arte do hero e o favicon também estão no R2 (`workloop/`). O layout vive em `template.html`; `build.py` injeta o conteúdo de `SPEC.en.md` e `SPEC.md` nos dois HTMLs.
+- Publicar nova versão: `python3 build.py` e suba `docs/index.html` e `docs/pt-br.html` para o R2 (presigned PUT via `create_upload_urls` do MCP Cloudflare, ou peça ao Claude). Não precisa redeploy do worker.
 - O projeto Cloudflare Pages `b2tech-workloop` (deploy paralelo de 19/08) ficou como backup e pode ser apagado.
 - Reverter para HTML embutido no worker: `publish_landing_page` com name `workloop-spec` e o HTML completo.
 - Regra: a URL canônica não muda nunca. Versões antigas continuam acessíveis pelo release no GitHub e pelo DOI de versão no Zenodo.

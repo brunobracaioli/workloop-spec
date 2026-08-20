@@ -2,46 +2,47 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22004648.svg)](https://doi.org/10.5281/zenodo.22004648)
 
-**Especificação do Workloop Agêntico** · versão 0.1.0-rc5 (rascunho para revisão) · protocolo AISAC · B2 Tech
+**Agentic Workloop Specification** · version 0.1.0-rc5 (draft for review) · AISAC protocol · B2 Tech
 
-> Autonomia probabilística para pensar. Governança determinística para agir.
+> Probabilistic autonomy for thinking. Deterministic governance for acting.
 >
-> Invariante: liberdade dentro do loop, gate determinístico em toda interface.
+> Invariant: freedom inside the loop, a deterministic gate at every interface.
 
-Um **workloop agêntico** é um sistema de dois ou mais loops agênticos que interagem entre si por canais explícitos. Quando todos os participantes estão sob uma mesma autoridade de política (a organização que os criou), o workloop é **governado**: nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Quando o grafo cruza a fronteira da autoridade, o workloop é **aberto** e valem regras defensivas.
+An **agentic workloop** is a system of two or more agentic loops that interact through explicit channels. When all participants are under one policy authority (the organization that created them), the workloop is **governed**: no inter-loop interaction and no externally effecting action may occur without passing through a deterministic gate that enforces that authority's policies and business rules. When the graph crosses the authority boundary, the workloop is **open** and defensive rules apply.
 
-*An agentic workloop is a system of two or more agentic loops interacting through explicit channels under one policy authority, where every inter-loop interaction and every externally effecting action passes through a deterministic gate enforcing that authority's business rules. English abstract inside the spec.*
+The Portuguese translation remains available as a secondary language in [`README.pt-BR.md`](README.pt-BR.md) and [`SPEC.md`](SPEC.md).
 
 | | |
 |---|---|
-| Texto normativo | [`SPEC.md`](SPEC.md) |
-| Página canônica | https://workloop.b2tech.io  |
+| Normative text | [`SPEC.en.md`](SPEC.en.md) |
+| Portuguese text | [`SPEC.md`](SPEC.md) |
+| Canonical page | https://workloop.b2tech.io  |
 | DOI | [10.5281/zenodo.22004648](https://doi.org/10.5281/zenodo.22004648) |
-| Licença | [CC BY 4.0](LICENSE) |
-| Mudanças | [`CHANGELOG.md`](CHANGELOG.md) |
-| Como citar | [`CITATION.cff`](CITATION.cff) |
+| License | [CC BY 4.0](LICENSE) |
+| Changes | [`CHANGELOG.md`](CHANGELOG.md) |
+| How to cite | [`CITATION.cff`](CITATION.cff) |
 
 ## Status
 
-Rascunho para comentários (*Request for Comments*). Abra uma issue para propor mudanças em definições, invariante, corolários ou requisitos. Ao chegar a `0.1.0`, o texto congela e passa a seguir SemVer (ver seção 13 do spec).
+Draft for comments (*Request for Comments*). Open an issue to propose changes to definitions, the invariant, corollaries, or requirements. At `0.1.0`, the text freezes and follows SemVer (see section 13 of the spec).
 
-## Nome
+## Name
 
-"Workloop" e "workloop agêntico" são termos do protocolo AISAC (Bruno Bracaioli / B2 Tech). Use livremente, com atribuição a esta especificação. Não há marca registrada sobre o termo.
+"Workloop" and "agentic workloop" are terms of the AISAC protocol (Bruno Bracaioli / B2 Tech). Use them freely with attribution to this specification. The term is not trademarked.
 
-## Como citar
+## How to cite
 
-Bracaioli, B. (2026). *Workloop Spec: Especificação do Workloop Agêntico* (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: 10.5281/zenodo.22004648. https://workloop.b2tech.io
+Bracaioli, B. (2026). *Workloop Spec: Agentic Workloop Specification* (version 0.1.0). B2 Tech / AISAC protocol. DOI: 10.5281/zenodo.22004648. https://workloop.b2tech.io
 
-## Licenças
+## Licenses
 
-Texto da especificação: CC BY 4.0 (arquivo `LICENSE`). Script `build.py`: MIT (cabeçalho SPDX).
+Specification text: CC BY 4.0 (`LICENSE`). Script `build.py`: MIT (SPDX header).
 
-## Gerar a página
+## Build the pages
 
 ```bash
 pip install markdown
-python3 build.py   # escreve docs/index.html a partir de SPEC.md
+python3 build.py   # writes docs/index.html (EN) and docs/pt-br.html (pt-BR)
 ```
 
-`SPEC.md` é a fonte de verdade; `docs/index.html` é gerado.
+`SPEC.en.md` is the default English source. `SPEC.md` remains the source for the Portuguese translation. Both pages are generated from their respective sources.

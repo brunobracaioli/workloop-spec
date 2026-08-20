@@ -1,15 +1,15 @@
 {
-  "title": "Workloop Spec: Especificação do Workloop Agêntico",
+  "title": "Workloop Spec: Agentic Workloop Specification",
   "upload_type": "publication",
   "publication_type": "technicalnote",
-  "description": "<p>Especificação do <strong>workloop agêntico</strong>: sistema de dois ou mais loops agênticos que interagem por canais explícitos sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Define termos, o invariante (\"liberdade dentro do loop, gate determinístico em toda interface\"), corolários, requisitos operacionais, o modo aberto (grafo que cruza a fronteira da autoridade) e critérios de conformidade. Parte do protocolo AISAC (B2 Tech).</p><p><em>English abstract included in the document.</em></p>",
+  "description": "<p>Specification for the <strong>agentic workloop</strong>: a system of two or more agentic loops that interact through explicit channels under one policy authority (the organization that created them), where no inter-loop interaction and no externally effecting action occurs without passing through a deterministic gate that enforces that authority's policies and business rules. Defines terms, the invariant (\"freedom inside the loop, a deterministic gate at every interface\"), corollaries, operational requirements, the open mode (a graph crossing the authority boundary), and conformance criteria. Part of the AISAC protocol (B2 Tech).</p><p><em>Portuguese (Brazil) translation included as a secondary language.</em></p>",
   "creators": [
     { "name": "Bracaioli, Bruno", "affiliation": "B2 Tech (Bracaioli Tecnologia)" }
   ],
   "keywords": ["workloop", "agentic workloop", "workloop agêntico", "agent loops", "deterministic gates", "AI governance", "multi-agent systems", "policy enforcement", "AISAC"],
   "license": "cc-by-4.0",
   "access_right": "open",
-  "language": "por",
+  "language": "eng",
   "version": "0.1.0-rc5",
-  "notes": "Texto normativo em português (Brasil), com abstract em inglês. Página canônica: https://workloop.b2tech.io"
+  "notes": "Normative text in English, with a Portuguese (Brazil) secondary translation. Canonical page: https://workloop.b2tech.io"
 }

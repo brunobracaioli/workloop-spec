@@ -1,19 +1,22 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Workloop Spec · Especificação do Workloop Agêntico</title>
-<meta name="description" content="Workloop Spec: especificação do workloop agêntico, sistema de loops agênticos que interagem sob uma autoridade de política, com gate determinístico em toda interface. Protocolo AISAC · B2 Tech.">
+<title>Workloop Spec · Agentic Workloop Specification</title>
+<meta name="description" content="Workloop Spec: a specification for agentic loops interacting under one policy authority, with a deterministic gate at every interface. AISAC protocol · B2 Tech.">
 <meta name="author" content="Bruno Bracaioli">
-<meta property="og:title" content="Workloop Spec · Especificação do Workloop Agêntico">
-<meta property="og:description" content="Autonomia probabilística para pensar. Governança determinística para agir. Termos, invariante, corolários e conformidade do workloop agêntico.">
+<meta property="og:title" content="Workloop Spec · Agentic Workloop Specification">
+<meta property="og:description" content="Probabilistic autonomy for thinking. Deterministic governance for acting. Terms, invariant, corollaries, and conformance for agentic workloops.">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-favicon.png">
 <link rel="preload" as="image" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-hero.webp">
 <link rel="canonical" href="https://workloop.b2tech.io">
+<link rel="alternate" hreflang="en" href="https://workloop.b2tech.io">
+<link rel="alternate" hreflang="pt-BR" href="https://workloop.b2tech.io/pt-br.html">
+<link rel="alternate" hreflang="x-default" href="https://workloop.b2tech.io">
 <style>
 :root{
   --bg-base:#0a0a0a; --bg-card:#141414; --bg-code:#0d0d0d;
@@ -41,6 +44,8 @@ a:hover,a:focus-visible{border-bottom-color:var(--accent-bright)}
 .topbar .ver{white-space:nowrap}
 .topbar .brand a{color:inherit;border:0}
 .topbar .ver{color:var(--text-dim)}
+.topbar .language{color:var(--text-secondary);text-transform:none;letter-spacing:0}
+.topbar .language a{color:var(--text-secondary);border-bottom-color:var(--border)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .hero{position:relative;overflow:hidden;padding:56px 0 24px;border-bottom:1px solid var(--border);background-color:var(--bg-base);background-repeat:no-repeat;background-position:right center;background-size:62% auto}
 /* veu: escurece a faixa da esquerda, onde o texto cai, e dissolve a arte no rodape */
@@ -121,39 +126,39 @@ footer .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tra
 </style>
 </head>
 <body>
-<div class="topbar"><div class="brand">■ <a href="https://b2tech.io">AISAC · B2 Tech</a></div><div class="ver">0.1.0-rc5 · Draft</div></div>
+<div class="topbar"><div class="brand">■ <a href="https://b2tech.io">AISAC · B2 Tech</a></div><div class="ver">0.1.0-rc5 · Draft <span class="language">· <a href="pt-br.html" hreflang="pt-BR">Português (Brasil)</a></span></div></div>
 
 <header class="hero"><div class="wrap">
   <p class="eyebrow">Workloop Spec · Request for Comments</p>
   <h1 class="title">Workloop <span>Spec</span></h1>
-  <p class="subtitle">Especificação do Workloop Agêntico</p>
-  <p class="thesis"><span>Autonomia probabilística para pensar.</span> <em>Governança determinística para agir.</em></p>
-  <p class="invariant"><span class="tag">Invariante técnico</span>Liberdade dentro do loop. <b>Gate determinístico em toda interface.</b></p>
+  <p class="subtitle">Agentic Workloop Specification</p>
+  <p class="thesis"><span>Probabilistic autonomy for thinking.</span> <em>Deterministic governance for acting.</em></p>
+  <p class="invariant"><span class="tag">Technical invariant</span>Freedom inside the loop. <b>A deterministic gate at every interface.</b></p>
 
 
-  <dl class="meta"><div class="meta-item"><dt>Versão</dt><dd>0.1.0-rc5 (rascunho para revisão)</dd></div><div class="meta-item"><dt>Status</dt><dd>Draft · Request for Comments</dd></div><div class="meta-item"><dt>Data</dt><dd>2026-08-18</dd></div><div class="meta-item"><dt>Autor</dt><dd>Bruno Bracaioli · B2 Tech · protocolo AISAC</dd></div><div class="meta-item"><dt>Licença</dt><dd>CC BY 4.0</dd></div><div class="meta-item"><dt>DOI</dt><dd><a href="https://doi.org/10.5281/zenodo.22004648">https://doi.org/10.5281/zenodo.22004648</a></dd></div><div class="meta-item"><dt>URL canônica</dt><dd><a href="https://workloop.b2tech.io">https://workloop.b2tech.io</a></dd></div><div class="meta-item"><dt>Repositório</dt><dd><a href="https://github.com/brunobracaioli/workloop-spec">https://github.com/brunobracaioli/workloop-spec</a></dd></div></dl>
+  <dl class="meta"><div class="meta-item"><dt>Version</dt><dd>0.1.0-rc5 (draft for review)</dd></div><div class="meta-item"><dt>Status</dt><dd>Draft · Request for Comments</dd></div><div class="meta-item"><dt>Date</dt><dd>2026-08-18</dd></div><div class="meta-item"><dt>Author</dt><dd>Bruno Bracaioli · B2 Tech · AISAC protocol</dd></div><div class="meta-item"><dt>License</dt><dd>CC BY 4.0</dd></div><div class="meta-item"><dt>DOI</dt><dd><a href="https://doi.org/10.5281/zenodo.22004648">https://doi.org/10.5281/zenodo.22004648</a></dd></div><div class="meta-item"><dt>Canonical URL</dt><dd><a href="https://workloop.b2tech.io">https://workloop.b2tech.io</a></dd></div><div class="meta-item"><dt>Repository</dt><dd><a href="https://github.com/brunobracaioli/workloop-spec">https://github.com/brunobracaioli/workloop-spec</a></dd></div></dl>
 </div></header>
 
 <div class="wrap layout">
-  <nav class="toc" aria-label="Sumário"><details id="toc-box" open><summary class="toc-title">Sumário</summary><div class="toc">
+  <nav class="toc" aria-label="Table of contents"><details id="toc-box" open><summary class="toc-title">Table of contents</summary><div class="toc">
 
 <ul>
-<li><a href="#resumo">Resumo</a></li>
-<li><a href="#abstract-en">Abstract (EN)</a></li>
-<li><a href="#1-motivacao">1. Motivação</a></li>
-<li><a href="#2-convencoes-e-terminologia">2. Convenções e terminologia</a></li>
-<li><a href="#3-definicoes">3. Definições</a></li>
-<li><a href="#4-invariante-liberdade-dentro-do-loop-gate-deterministico-em-toda-interface">4. Invariante: liberdade dentro do loop, gate determinístico em toda interface</a></li>
-<li><a href="#5-corolarios">5. Corolários</a></li>
-<li><a href="#6-requisitos-operacionais">6. Requisitos operacionais</a></li>
-<li><a href="#7-workloop-aberto">7. Workloop aberto</a></li>
-<li><a href="#8-conformidade">8. Conformidade</a></li>
-<li><a href="#9-o-que-nao-e-workloop">9. O que não é workloop</a></li>
-<li><a href="#10-exemplo-canonico">10. Exemplo canônico</a></li>
-<li><a href="#11-relacao-com-trabalhos-anteriores">11. Relação com trabalhos anteriores</a></li>
-<li><a href="#12-nome-licenca-e-citacao">12. Nome, licença e citação</a></li>
-<li><a href="#13-versionamento-desta-especificacao">13. Versionamento desta especificação</a></li>
-<li><a href="#apendice-a-checklist-de-conformidade">Apêndice A: Checklist de conformidade</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#1-motivation">1. Motivation</a></li>
+<li><a href="#2-conventions-and-terminology">2. Conventions and terminology</a></li>
+<li><a href="#3-definitions">3. Definitions</a></li>
+<li><a href="#4-invariant-freedom-inside-the-loop-a-deterministic-gate-at-every-interface">4. Invariant: freedom inside the loop, a deterministic gate at every interface</a></li>
+<li><a href="#5-corollaries">5. Corollaries</a></li>
+<li><a href="#6-operational-requirements">6. Operational requirements</a></li>
+<li><a href="#7-open-workloop">7. Open workloop</a></li>
+<li><a href="#8-conformance">8. Conformance</a></li>
+<li><a href="#9-what-is-not-a-workloop">9. What is not a workloop</a></li>
+<li><a href="#10-canonical-example">10. Canonical example</a></li>
+<li><a href="#11-relation-to-prior-work">11. Relation to prior work</a></li>
+<li><a href="#12-name-license-and-citation">12. Name, license, and citation</a></li>
+<li><a href="#13-versioning-this-specification">13. Versioning this specification</a></li>
+<li><a href="#appendix-a-conformance-checklist">Appendix A: Conformance checklist</a></li>
 </ul>
 </div>
 
@@ -172,199 +177,199 @@ footer .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tra
   })();
   </script>
   <article>
-    <div class="def-block"><p class="tag">DEF-11 · Definição nuclear</p><p><strong>Workloop agêntico governado.</strong> Sistema de dois ou mais loops agênticos que interagem por canais explícitos (mensagem, evento ou estado compartilhado mediado), sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade.</p></div>
-    <p style="margin:10px 0 36px;color:var(--text-dim);font-size:13px;font-family:var(--mono)">Texto normativo completo abaixo. Este é um rascunho para comentários: abra uma issue no repositório ou responda ao autor.</p>
-    <h2 id="resumo">Resumo</h2>
-<p>Um <strong>workloop agêntico</strong> é um sistema de dois ou mais loops agênticos que interagem entre si por canais explícitos. Quando todos os participantes estão sob uma mesma autoridade de política (a organização que os criou), o workloop é <strong>governado</strong>, e esta especificação exige que nenhuma interação entre loops e nenhuma ação com efeito externo ocorra sem passar por um gate determinístico que impõe as políticas e regras de negócio dessa autoridade. Quando o grafo cruza a fronteira da autoridade, o workloop é <strong>aberto</strong> e valem regras defensivas. O documento define os termos, o invariante ("liberdade dentro do loop, gate determinístico em toda interface"), os corolários, requisitos operacionais e critérios de conformidade.</p>
-<h2 id="abstract-en">Abstract (EN)</h2>
-<p>An <strong>agentic workloop</strong> is a system of two or more agentic loops that interact through explicit channels. When every participant sits under one policy authority (the organization that created them), the workloop is <strong>governed</strong>: no inter-loop interaction and no externally effecting action may occur without passing through a deterministic gate that enforces that authority's policies and business rules. When the graph crosses the authority boundary, the workloop is <strong>open</strong> and defensive rules apply. This specification defines the terms, the invariant ("freedom inside the loop, a deterministic gate at every interface"), corollaries, operational requirements and conformance criteria.</p>
-<h2 id="1-motivacao">1. Motivação</h2>
-<p>Loops agênticos, processos em que um modelo decide ações e usa ferramentas até parar, deixaram de ser unidades isoladas. Em operação real, um loop de atendimento grava no CRM que outro loop lê; um loop de mídia publica o que outro loop comenta; um loop pede a outro que execute o que ele mesmo não pode. É nessa interação que a conformidade se perde. Dentro de um loop, prompts, skills e instruções são política <em>não determinística</em>: o modelo pode ou não obedecer. A organização precisa de um lugar onde a política é imposta por código, não pedida por prompt. Esse lugar é a interface: entre loops, e entre loop e mundo.</p>
-<p>O vocabulário existente não cobre esse objeto. "Agent loop" descreve um loop. "Workflow agêntico" descreve um processo com passos de modelo dentro de um único runtime. "Agent mesh" descreve infraestrutura de tráfego, identidade e roteamento entre agentes. Nenhum nomeia o <em>sistema de loops autônomos governado por regra de negócio na interface</em>. <strong>Workloop</strong> nomeia isso, em oposição direta a workflow: workflow é o grafo acíclico que um runtime possui; workloop é o sistema de loops que interagem sob uma autoridade.</p>
-<p>Um workloop agêntico governado é o que se costuma chamar de "empresa operada por IA", com uma precisão que o uso popular omite: a operação é agêntica; a governança é humana e determinística. Loops executam; a autoridade define políticas, envelope e escalonamento; meta-loops (<code class="id">DEF-14</code>) aprimoram dentro do envelope. Esta especificação não descreve, nem permite, uma organização em que o modelo define a própria política. A tese, em duas frases: autonomia probabilística para pensar; governança determinística para agir.</p>
-<h2 id="2-convencoes-e-terminologia">2. Convenções e terminologia</h2>
-<p>As palavras-chave <strong><span class="kw">DEVE</span></strong>, <strong><span class="kw">NÃO DEVE</span></strong>, <strong><span class="kw">DEVERIA</span></strong>, <strong><span class="kw">NÃO DEVERIA</span></strong> e <strong><span class="kw">PODE</span></strong> correspondem, respectivamente, a MUST, MUST NOT, SHOULD, SHOULD NOT e MAY, conforme RFC 2119 e RFC 8174, e só têm sentido normativo quando grafadas em maiúsculas, inclusive nas flexões de número (<span class="kw">DEVEM</span>, <span class="kw">PODEM</span>).</p>
-<p>Identificadores: <code>DEF-n</code> (definições), <code>INV-n</code> (invariante), <code>COR-n</code> (corolários), <code>REQ-n</code> (requisitos operacionais), <code>OPEN-n</code> (workloop aberto), <code>CONF-n</code> (conformidade). Referencie cláusulas por identificador.</p>
-<p>"Modelo" designa qualquer componente cuja saída não é verificável estaticamente, tipicamente um modelo de linguagem, independentemente de sua temperatura ou de quão previsível pareça.</p>
-<p>Seções marcadas como <em>informativas</em> não criam obrigações.</p>
-<h2 id="3-definicoes">3. Definições</h2>
-<p><strong><code class="id">DEF-1</code> · Loop agêntico.</strong> Processo autônomo, com gatilho próprio (evento, agenda ou mensagem) e ciclo de vida próprio, em que um modelo decide iterativamente ações (incluindo uso de ferramentas e emissão de mensagens) até uma condição de parada. Pode ser durável (estado persistido entre falhas) ou não; a durabilidade não é definidora.</p>
-<p><strong><code class="id">DEF-2</code> · Autoridade de política.</strong> A organização, ou unidade dela, que cria e opera loops e cujas políticas e regras de negócio devem ser impostas. Um participante está <em>sob</em> a autoridade quando ela pode alterá-lo, interrompê-lo e inspecioná-lo.</p>
-<p><strong><code class="id">DEF-3</code> · Canal.</strong> Meio explícito pelo qual loops interagem: (a) mensagem direcionada; (b) evento publicado e consumido; (c) estado compartilhado <em>mediado</em>: repositório, banco, arquivo ou serviço cujo acesso passa por um mediador que aplica gate. Estado compartilhado sem mediador não é canal (ver <code class="id">COR-3</code>).</p>
-<p><strong><code class="id">DEF-4</code> · Interface.</strong> Ponto em que uma interação atravessa a fronteira de um loop ou de um workloop (<code class="id">DEF-13</code>): emissão de mensagem ou evento, escrita em estado compartilhado, ou ação com efeito externo. É onde o gate reside. Não confundir com interface de programação ou de usuário: aqui, interface é a fronteira gateada de um loop ou workloop.</p>
-<p><strong><code class="id">DEF-5</code> · Ação com efeito externo.</strong> Qualquer ação cujo efeito é observável fora do loop: mensagem enviada, registro escrito, publicação, transação, chamada a sistema de terceiros.</p>
-<p><strong><code class="id">DEF-6</code> · Gate determinístico.</strong> Predicado computável, avaliado na interface, cujo resultado é <em>permitir</em>, <em>bloquear</em> ou <em>escalar</em>, e cujo valor é função exclusiva de estado determinístico (schema, allow-lists, autoridade efetiva da cadeia, orçamento, contagem de saltos, janela temporal, procedência) e nunca do julgamento de um modelo. Determinístico significa: mesma entrada, mesmo resultado; verificável por teste; reproduzível em auditoria.</p>
-<p><strong><code class="id">DEF-7</code> · Regra decidível na interface.</strong> Regra de negócio cuja violação pode ser detectada por gate determinístico a partir da mensagem ou ação e do estado disponível: regras estruturais, quantitativas, de autorização, temporais e de procedência. <strong>Regra não decidível</strong> é a que exige interpretação semântica: adequação, veracidade, tom, promessa implícita.</p>
-<p><strong><code class="id">DEF-8</code> · Autoridade efetiva da cadeia.</strong> Conjunto de permissões resultante da interseção das autoridades dos loops ao longo da cadeia de delegação que originou uma ação. Nunca é maior que a autoridade do originador.</p>
-<p><strong><code class="id">DEF-9</code> · Contrato de workloop (workloop contract).</strong> Especificação da interface de um loop, ou de um workloop composto no nível do workloop (<code class="id">DEF-13</code>): schemas de entrada e saída, ações com efeito externo declaradas, escopo de autoridade, orçamentos (custo, saltos, taxa) e os gates aplicáveis.</p>
-<p><strong><code class="id">DEF-10</code> · Workloop agêntico.</strong> Sistema de dois ou mais loops agênticos que interagem por canais. <span class="kw">PODE</span> incluir componentes não agênticos (serviços, APIs, workflows determinísticos, mediadores), que participam de canais e interfaces sem serem loops; o termo cobre o conjunto.</p>
-<p><strong><code class="id">DEF-11</code> · Workloop agêntico governado.</strong> Sistema de dois ou mais loops agênticos que interagem por canais explícitos (mensagem, evento ou estado compartilhado mediado), sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade.</p>
-<p><strong><code class="id">DEF-12</code> · Workloop aberto.</strong> Workloop cujo grafo cruza a fronteira da autoridade; o operador só coloca gate nos próprios arcos e passa a exigir terminação e marcação de auto-origem em toda saída.</p>
-<p><strong><code class="id">DEF-13</code> · Workloop composto.</strong> Workloop cujos participantes incluem outros workloops. Cada workloop participante expõe um contrato (<code class="id">DEF-9</code>) no nível do workloop, não só dos seus loops. Distinguem-se três interfaces: interna (entre loops de um mesmo workloop), entre workloops (fronteira de um workloop participante) e externa (fronteira da autoridade, seção 7). O invariante e os corolários aplicam-se em todos os níveis. A autoridade de um workloop participante é subconjunto da autoridade do workloop que o contém (<code class="id">COR-1</code>).</p>
-<p><strong><code class="id">DEF-14</code> · Meta-loop.</strong> Loop agêntico cujas saídas alteram outros loops (prompts, parâmetros, modelos, conteúdo, agenda, alocação de orçamento dentro de tetos) a partir de dados do próprio workloop. Rege-se por <code class="id">REQ-6</code>.</p>
-<p><em>Nota.</em> "Governado" e "aberto" descrevem o escopo da autoridade sobre o grafo. "Conforme" descreve a satisfação desta especificação (seção 8). Um workloop governado que viola o invariante não é conforme; continua sendo governado.</p>
-<h2 id="4-invariante-liberdade-dentro-do-loop-gate-deterministico-em-toda-interface">4. Invariante: liberdade dentro do loop, gate determinístico em toda interface</h2>
-<p>O modelo é livre dentro do loop. Nada atravessa uma interface sem gate determinístico. Em uma linha: autonomia probabilística para pensar, governança determinística para agir.</p>
-<p><strong><code class="id">INV-1</code></strong> Toda interação entre loops <span class="kw">DEVE</span> ocorrer por canal explícito (<code class="id">DEF-3</code>).</p>
-<p><strong><code class="id">INV-2</code></strong> Toda interação entre loops e toda ação com efeito externo <span class="kw">DEVE</span> passar por ao menos um gate determinístico (<code class="id">DEF-6</code>) na interface.</p>
-<p><strong><code class="id">INV-3</code></strong> O predicado de um gate <span class="kw">DEVE</span> ser função exclusiva de estado determinístico e <span class="kw">NÃO DEVE</span> depender do julgamento de um modelo. Verificação por modelo <span class="kw">PODE</span> existir como camada adicional, mas não conta como gate.</p>
-<p><strong><code class="id">INV-4</code></strong> Um gate <span class="kw">NÃO DEVE</span> ser contornável, desabilitável ou reescrito pelo loop que ele governa. O gate reside fora do controle do modelo (hook, mediador, proxy, política de plataforma), e <span class="kw">NÃO DEVE</span> existir caminho sem gate para a mesma interface.</p>
-<p><strong><code class="id">INV-5</code></strong> A autoridade <span class="kw">DEVE</span> classificar suas regras de negócio em decidíveis e não decidíveis na interface (<code class="id">DEF-7</code>). Regras decidíveis <span class="kw">DEVEM</span> ser impostas por gate. Regras não decidíveis <span class="kw">DEVEM</span> ser convertidas em estrutura sempre que possível (ações enumeradas, saídas tipadas, templates com variáveis validadas) e, no que restar, tratadas como probabilísticas (verificação por modelo e/ou revisão humana), com escalonamento humano obrigatório acima de limiar de impacto definido pela autoridade. Regras não decidíveis <span class="kw">NÃO DEVEM</span> ser declaradas como garantidas.</p>
-<p><strong><code class="id">INV-6</code></strong> A camada determinística sozinha <span class="kw">DEVE</span> limitar o dano máximo do sistema (envelope): na hipótese de falha total das camadas probabilísticas, nenhuma ação fora do envelope é possível.</p>
-<h2 id="5-corolarios">5. Corolários</h2>
-<p><strong><code class="id">COR-1</code> · Atenuação de autoridade.</strong> A autoridade efetiva de uma ação é a interseção das autoridades ao longo da cadeia (<code class="id">DEF-8</code>). Um loop <span class="kw">NÃO DEVE</span> obter, ao delegar a outro, permissão que não possui. Gates <span class="kw">DEVEM</span> avaliar a autoridade efetiva da cadeia, e não apenas a do loop executor. A atenuação vale também para a hierarquia de composição (<code class="id">DEF-13</code>): um workloop participante nunca tem autoridade maior que a do workloop que o contém. Isso exige que toda interação carregue a origem (<code class="id">COR-2</code>).</p>
-<p><strong><code class="id">COR-2</code> · Rastreabilidade.</strong> Toda interação <span class="kw">DEVE</span> carregar identificador de origem (loop originador e autoridade) e identificador de trace ponta a ponta, propagados a cada salto. Toda decisão de gate <span class="kw">DEVE</span> ser registrada com: instante, trace, interface, gate, entrada avaliada (ou seu hash), resultado e versão da política aplicada. O log de decisões dos gates é o artefato de conformidade do sistema.</p>
-<p><strong><code class="id">COR-3</code> · Canal implícito é defeito.</strong> Interação entre loops fora de canal gateado, por efeitos colaterais não mediados em arquivos, registros, publicações ou qualquer estado compartilhado sem mediador, é defeito de arquitetura, não integração. Sistemas conformes <span class="kw">DEVEM</span> mediar todo estado compartilhado por gate ou impedir o acesso direto.</p>
-<h2 id="6-requisitos-operacionais">6. Requisitos operacionais</h2>
-<p><strong><code class="id">REQ-1</code> · Terminação.</strong> Toda conversa entre loops <span class="kw">DEVE</span> ter orçamento de saltos e/ou de custo, e cooldown por par (origem, destino) e por assunto; gates <span class="kw">DEVEM</span> bloquear ou escalar quando excedidos. Loops de modelo não param sozinhos.</p>
-<p><strong><code class="id">REQ-2</code> · Procedência e contaminação.</strong> Mensagens entre loops <span class="kw">DEVEM</span> separar dado de instrução por estrutura tipada. Conteúdo originado fora da autoridade <span class="kw">DEVE</span> carregar rótulo de procedência, e gates <span class="kw">PODEM</span> restringir ações a jusante na presença de conteúdo assim rotulado. Gates não detectam injeção; limitam o que ela alcança.</p>
-<p><strong><code class="id">REQ-3</code> · Idempotência e concorrência.</strong> Ações com efeito externo <span class="kw">DEVEM</span> ser idempotentes ou protegidas por chave de idempotência. Acesso concorrente a estado compartilhado <span class="kw">DEVE</span> ser serializado (lease ou lock) ou convergente.</p>
-<p><strong><code class="id">REQ-4</code> · Contrato publicado.</strong> Todo loop <span class="kw">DEVE</span> expor seu contrato de workloop (<code class="id">DEF-9</code>), e o contrato <span class="kw">DEVE</span> ser versionado.</p>
-<p><strong><code class="id">REQ-5</code> · Interrupção.</strong> A autoridade <span class="kw">DEVE</span> poder interromper qualquer loop e qualquer canal por meio independente do modelo, e essa capacidade <span class="kw">DEVE</span> ser testada periodicamente.</p>
-<p><strong><code class="id">REQ-6</code> · Meta-loop e auto-aprimoramento.</strong> Toda saída de um meta-loop (<code class="id">DEF-14</code>) que altera outro loop é ação com efeito externo (<code class="id">DEF-5</code>) e <span class="kw">DEVE</span> passar por gate. Alterações em políticas, gates, contratos ou no envelope (<code class="id">INV-6</code>) <span class="kw">NÃO DEVEM</span> ser executadas por meta-loop; <span class="kw">DEVEM</span> passar por uma interface de mudança de política, com autoridade humana, versionamento e registro (<code class="id">COR-2</code>). Auto-aprimoramento é permitido dentro do envelope; o envelope não se automodifica. Um meta-loop <span class="kw">NÃO DEVE</span> alterar os gates que o governam (<code class="id">INV-4</code>).</p>
-<h2 id="7-workloop-aberto">7. Workloop aberto</h2>
-<p>Quando o grafo cruza a fronteira da autoridade:</p>
-<p><strong><code class="id">OPEN-1</code></strong> O operador <span class="kw">DEVE</span> aplicar gate determinístico em todo arco de saída sob seu controle, tratando cada saída como potencialmente fechando um ciclo.</p>
-<p><strong><code class="id">OPEN-2</code></strong> O operador <span class="kw">DEVE</span> marcar a auto-origem de toda saída: metadado fora de banda onde o meio preserva (cabeçalhos de e-mail ou HTTP, contexto de trace, trailers), marcador em banda onde não preserva; e <span class="kw">DEVE</span> reconhecer a própria marca na entrada, tratando-a como retorno.</p>
-<p><strong><code class="id">OPEN-3</code></strong> O operador <span class="kw">DEVE</span> impor terminação (orçamento de saltos, cooldown) e <span class="kw">DEVE</span> monitorar o meio por recorrência (taxa, quase-duplicata), porque marcadores não sobrevivem a transformação semântica de terceiros.</p>
-<p><strong><code class="id">OPEN-4</code></strong> O operador <span class="kw">NÃO DEVE</span> presumir observabilidade ponta a ponta nem confiar em gate de terceiros.</p>
-<p><strong><code class="id">OPEN-5</code></strong> Toda saída de um workloop governado para fora da autoridade é uma interface de workloop aberto e <span class="kw">DEVE</span> cumprir <code class="id">OPEN-1</code> a <code class="id">OPEN-4</code>.</p>
-<h2 id="8-conformidade">8. Conformidade</h2>
-<p><strong><code class="id">CONF-L</code> · Loop conforme.</strong> Um loop é conforme quando: expõe contrato versionado (<code class="id">REQ-4</code>); toda saída passa por gate (<code class="id">INV-2</code>, <code class="id">INV-3</code>, <code class="id">INV-4</code>); propaga origem e trace (<code class="id">COR-2</code>); suas ações com efeito externo são idempotentes (<code class="id">REQ-3</code>); respeita orçamentos (<code class="id">REQ-1</code>); e pode ser interrompido por meio independente do modelo (<code class="id">REQ-5</code>).</p>
-<p><strong><code class="id">CONF-S</code> · Sistema conforme.</strong> Um workloop governado é conforme quando: toda interface tem gate, nos três níveis (<code class="id">INV-1</code>, <code class="id">INV-2</code>, <code class="id">DEF-13</code>); a classificação de regras está publicada e o envelope definido (<code class="id">INV-5</code>, <code class="id">INV-6</code>); gates avaliam a autoridade efetiva da cadeia e da hierarquia (<code class="id">COR-1</code>); o log de decisões é completo (<code class="id">COR-2</code>); não há estado compartilhado não mediado (<code class="id">COR-3</code>); todo meta-loop cumpre <code class="id">REQ-6</code>; e suas interfaces externas cumprem a seção 7.</p>
-<p><strong><code class="id">CONF-D</code> · Declaração.</strong> "Conforme com Workloop Spec 0.1.0" só <span class="kw">PODE</span> ser afirmado quando todos os <span class="kw">DEVE</span> aplicáveis são satisfeitos e verificáveis por evidência: testes dos gates e log de decisões.</p>
-<h2 id="9-o-que-nao-e-workloop">9. O que não é workloop</h2>
-<p><em>Informativo.</em></p>
+    <div class="def-block"><p class="tag">DEF-11 · Core definition</p><p><strong>Governed agentic workloop.</strong> A system of two or more agentic loops that interact through explicit channels (message, event, or mediated shared state), under one policy authority (the organization that created them), in which no inter-loop interaction and no action with external effect occurs without passing through a deterministic gate that enforces that authority's policies and business rules.</p></div>
+    <p style="margin:10px 0 36px;color:var(--text-dim);font-size:13px;font-family:var(--mono)">Full normative text below. This is a draft for comments: open an issue in the repository or reply to the author.</p>
+    <h2 id="summary">Summary</h2>
+<p>An <strong>agentic workloop</strong> is a system of two or more agentic loops that interact through explicit channels. When all participants are under one policy authority (the organization that created them), the workloop is <strong>governed</strong>, and this specification requires that no inter-loop interaction and no externally effecting action occur without passing through a deterministic gate that enforces that authority's policies and business rules. When the graph crosses the authority boundary, the workloop is <strong>open</strong> and defensive rules apply. This document defines the terms, the invariant ("freedom inside the loop, a deterministic gate at every interface"), corollaries, operational requirements, and conformance criteria.</p>
+<h2 id="abstract">Abstract</h2>
+<p>An <strong>agentic workloop</strong> is a system of two or more agentic loops that interact through explicit channels. When every participant sits under one policy authority (the organization that created them), the workloop is <strong>governed</strong>: no inter-loop interaction and no externally effecting action may occur without passing through a deterministic gate that enforces that authority's policies and business rules. When the graph crosses the authority boundary, the workloop is <strong>open</strong> and defensive rules apply. This specification defines the terms, the invariant ("freedom inside the loop, a deterministic gate at every interface"), corollaries, operational requirements, and conformance criteria.</p>
+<h2 id="1-motivation">1. Motivation</h2>
+<p>Agentic loops—processes in which a model decides actions and uses tools until it stops—are no longer isolated units. In real operation, a customer-service loop writes to the CRM that another loop reads; a media loop publishes what another loop comments on; one loop asks another to execute what it cannot execute itself. This is where compliance is lost. Inside a loop, prompts, skills, and instructions are non-deterministic policy: the model may or may not follow them. The organization needs a place where policy is enforced by code, not requested by prompt. That place is the interface: between loops and between a loop and the world.</p>
+<p>Existing vocabulary does not cover this object. "Agent loop" describes a loop. "Agentic workflow" describes a process with model steps inside a single runtime. "Agent mesh" describes traffic, identity, and routing infrastructure between agents. None names the <em>system of autonomous loops governed by business rules at the interface</em>. <strong>Workloop</strong> names this system, in direct opposition to workflow: a workflow is the acyclic graph owned by a runtime; a workloop is a system of loops that interact under one authority.</p>
+<p>A governed agentic workloop is what is often called an "AI-operated company," with a precision that popular usage omits: the operation is agentic; governance is human and deterministic. Loops execute; the authority defines policies, the envelope, and escalation; meta-loops (<code class="id">DEF-14</code>) improve the system within the envelope. This specification neither describes nor permits an organization in which the model defines its own policy. The thesis, in two sentences: probabilistic autonomy for thinking; deterministic governance for acting.</p>
+<h2 id="2-conventions-and-terminology">2. Conventions and terminology</h2>
+<p>The key words <strong><span class="kw">MUST</span></strong>, <strong><span class="kw">MUST NOT</span></strong>, <strong><span class="kw">SHOULD</span></strong>, <strong><span class="kw">SHOULD NOT</span></strong>, and <strong><span class="kw">MAY</span></strong> correspond respectively to <span class="kw">MUST</span>, <span class="kw">MUST NOT</span>, <span class="kw">SHOULD</span>, <span class="kw">SHOULD NOT</span>, and <span class="kw">MAY</span> as described in RFC 2119 and RFC 8174, and have normative meaning only when written in uppercase, including inflected forms (<span class="kw">MUST</span>, <span class="kw">MAY</span>).</p>
+<p>Identifiers: <code>DEF-n</code> (definitions), <code>INV-n</code> (invariant), <code>COR-n</code> (corollaries), <code>REQ-n</code> (operational requirements), <code>OPEN-n</code> (open workloop), and <code>CONF-n</code> (conformance). Refer to clauses by identifier.</p>
+<p>"Model" means any component whose output cannot be verified statically, typically a language model, regardless of its temperature or how predictable it may seem.</p>
+<p>Sections marked <em>informative</em> create no obligations.</p>
+<h2 id="3-definitions">3. Definitions</h2>
+<p><strong><code class="id">DEF-1</code> · Agentic loop.</strong> An autonomous process with its own trigger (event, schedule, or message) and its own lifecycle, in which a model iteratively decides actions (including tool use and message emission) until a stopping condition. It may be durable (state persisted across failures) or not; durability is not definitional.</p>
+<p><strong><code class="id">DEF-2</code> · Policy authority.</strong> The organization, or unit of it, that creates and operates loops and whose policies and business rules must be enforced. A participant is <em>under</em> the authority when the authority can change, interrupt, and inspect it.</p>
+<p><strong><code class="id">DEF-3</code> · Channel.</strong> An explicit medium through which loops interact: (a) a directed message; (b) a published and consumed event; or (c) <em>mediated</em> shared state: a repository, database, file, or service whose access passes through a mediator that applies a gate. Shared state without a mediator is not a channel (see <code class="id">COR-3</code>).</p>
+<p><strong><code class="id">DEF-4</code> · Interface.</strong> A point where an interaction crosses the boundary of a loop or a workloop (<code class="id">DEF-13</code>): emission of a message or event, writing to shared state, or an action with external effect. This is where the gate resides. Do not confuse this with a programming or user interface: here, interface means the gated boundary of a loop or workloop.</p>
+<p><strong><code class="id">DEF-5</code> · Action with external effect.</strong> Any action whose effect is observable outside the loop: a message sent, a record written, a publication, a transaction, or a call to a third-party system.</p>
+<p><strong><code class="id">DEF-6</code> · Deterministic gate.</strong> A computable predicate evaluated at the interface whose result is <em>allow</em>, <em>block</em>, or <em>escalate</em>, and whose value is a function only of deterministic state (schema, allow-lists, effective chain authority, budget, hop count, time window, provenance) and never of a model's judgment. Deterministic means: same input, same result; testable; reproducible in an audit.</p>
+<p><strong><code class="id">DEF-7</code> · Rule decidable at the interface.</strong> A business rule whose violation can be detected by a deterministic gate from the message or action and the available state: structural, quantitative, authorization, temporal, and provenance rules. A <strong>non-decidable rule</strong> requires semantic interpretation: suitability, truthfulness, tone, or an implicit promise.</p>
+<p><strong><code class="id">DEF-8</code> · Effective chain authority.</strong> The set of permissions resulting from the intersection of the authorities of the loops along the delegation chain that originated an action. It is never greater than the originator's authority.</p>
+<p><strong><code class="id">DEF-9</code> · Workloop contract.</strong> A specification of the interface of a loop, or of a composite workloop at the workloop level (<code class="id">DEF-13</code>): input and output schemas, declared actions with external effect, authority scope, budgets (cost, hops, rate), and applicable gates.</p>
+<p><strong><code class="id">DEF-10</code> · Agentic workloop.</strong> A system of two or more agentic loops that interact through channels. It <span class="kw">MAY</span> include non-agentic components (services, APIs, deterministic workflows, and mediators) that participate in channels and interfaces without being loops; the term covers the whole system.</p>
+<p><strong><code class="id">DEF-11</code> · Governed agentic workloop.</strong> A system of two or more agentic loops that interact through explicit channels (message, event, or mediated shared state), under one policy authority (the organization that created them), in which no inter-loop interaction and no action with external effect occurs without passing through a deterministic gate that enforces that authority's policies and business rules.</p>
+<p><strong><code class="id">DEF-12</code> · Open workloop.</strong> A workloop whose graph crosses the authority boundary; the operator places gates only on its own arcs and must enforce termination and self-origin marking on every output.</p>
+<p><strong><code class="id">DEF-13</code> · Composite workloop.</strong> A workloop whose participants include other workloops. Each participating workloop exposes a contract (<code class="id">DEF-9</code>) at the workloop level, not only at the level of its loops. Three interfaces are distinguished: internal (between loops in one workloop), between workloops (the boundary of a participating workloop), and external (the authority boundary, section 7). The invariant and corollaries apply at every level. A participating workloop's authority is a subset of the authority of the workloop containing it (<code class="id">COR-1</code>).</p>
+<p><strong><code class="id">DEF-14</code> · Meta-loop.</strong> An agentic loop whose outputs alter other loops (prompts, parameters, models, content, schedules, or budget allocation within caps) based on data from the workloop itself. It is governed by <code class="id">REQ-6</code>.</p>
+<p><em>Note.</em> "Governed" and "open" describe the scope of authority over the graph. "Conformant" describes satisfaction of this specification (section 8). A governed workloop that violates the invariant is not conformant; it remains governed.</p>
+<h2 id="4-invariant-freedom-inside-the-loop-a-deterministic-gate-at-every-interface">4. Invariant: freedom inside the loop, a deterministic gate at every interface</h2>
+<p>The model is free inside the loop. Nothing crosses an interface without a deterministic gate. In one line: probabilistic autonomy for thinking, deterministic governance for acting.</p>
+<p><strong><code class="id">INV-1</code></strong> Every interaction between loops <span class="kw">MUST</span> occur through an explicit channel (<code class="id">DEF-3</code>).</p>
+<p><strong><code class="id">INV-2</code></strong> Every interaction between loops and every action with external effect <span class="kw">MUST</span> pass through at least one deterministic gate (<code class="id">DEF-6</code>) at the interface.</p>
+<p><strong><code class="id">INV-3</code></strong> A gate's predicate <span class="kw">MUST</span> be a function only of deterministic state and <span class="kw">MUST NOT</span> depend on a model's judgment. Model-based verification <span class="kw">MAY</span> exist as an additional layer, but it does not count as a gate.</p>
+<p><strong><code class="id">INV-4</code></strong> A gate <span class="kw">MUST NOT</span> be bypassable, disableable, or rewritable by the loop it governs. The gate resides outside the model's control (hook, mediator, proxy, or platform policy), and there <span class="kw">MUST NOT</span> be an ungated path to the same interface.</p>
+<p><strong><code class="id">INV-5</code></strong> The authority <span class="kw">MUST</span> classify its business rules as decidable or non-decidable at the interface (<code class="id">DEF-7</code>). Decidable rules <span class="kw">MUST</span> be enforced by a gate. Non-decidable rules <span class="kw">MUST</span> be converted into structure whenever possible (enumerated actions, typed outputs, templates with validated variables) and, for what remains, treated as probabilistic (model verification and/or human review), with mandatory human escalation above an impact threshold defined by the authority. Non-decidable rules <span class="kw">MUST NOT</span> be declared guaranteed.</p>
+<p><strong><code class="id">INV-6</code></strong> The deterministic layer alone <span class="kw">MUST</span> limit the system's maximum harm (the envelope): if all probabilistic layers fail, no action outside the envelope is possible.</p>
+<h2 id="5-corollaries">5. Corollaries</h2>
+<p><strong><code class="id">COR-1</code> · Authority attenuation.</strong> The effective authority of an action is the intersection of the authorities along the chain (<code class="id">DEF-8</code>). A loop <span class="kw">MUST NOT</span> obtain, by delegating to another, permission it does not possess. Gates <span class="kw">MUST</span> evaluate the effective authority of the chain, not only that of the executing loop. Attenuation also applies to the composition hierarchy (<code class="id">DEF-13</code>): a participating workloop never has greater authority than the workloop containing it. This requires every interaction to carry its origin (<code class="id">COR-2</code>).</p>
+<p><strong><code class="id">COR-2</code> · Traceability.</strong> Every interaction <span class="kw">MUST</span> carry an origin identifier (originating loop and authority) and an end-to-end trace identifier, propagated at every hop. Every gate decision <span class="kw">MUST</span> be recorded with: timestamp, trace, interface, gate, evaluated input (or its hash), result, and version of the applied policy. The gate-decision log is the system's conformance artifact.</p>
+<p><strong><code class="id">COR-3</code> · Implicit channel is a defect.</strong> An interaction between loops outside a gated channel, through unmediated side effects in files, records, publications, or any shared state without a mediator, is an architecture defect, not an integration issue. Conformant systems <span class="kw">MUST</span> mediate all shared state through a gate or prevent direct access.</p>
+<h2 id="6-operational-requirements">6. Operational requirements</h2>
+<p><strong><code class="id">REQ-1</code> · Termination.</strong> Every conversation between loops <span class="kw">MUST</span> have a hop and/or cost budget, and a cooldown per pair (origin, destination) and per subject; gates <span class="kw">MUST</span> block or escalate when limits are exceeded. Model loops do not stop on their own.</p>
+<p><strong><code class="id">REQ-2</code> · Provenance and contamination.</strong> Messages between loops <span class="kw">MUST</span> separate data from instructions through typed structure. Content originating outside the authority <span class="kw">MUST</span> carry a provenance label, and gates <span class="kw">MAY</span> restrict downstream actions when such content is present. Gates do not detect injection; they limit what it can reach.</p>
+<p><strong><code class="id">REQ-3</code> · Idempotency and concurrency.</strong> Actions with external effect <span class="kw">MUST</span> be idempotent or protected by an idempotency key. Concurrent access to shared state <span class="kw">MUST</span> be serialized (lease or lock) or convergent.</p>
+<p><strong><code class="id">REQ-4</code> · Published contract.</strong> Every loop <span class="kw">MUST</span> expose its workloop contract (<code class="id">DEF-9</code>), and the contract <span class="kw">MUST</span> be versioned.</p>
+<p><strong><code class="id">REQ-5</code> · Interruption.</strong> The authority <span class="kw">MUST</span> be able to interrupt any loop and any channel through a mechanism independent of the model, and this capability <span class="kw">MUST</span> be tested periodically.</p>
+<p><strong><code class="id">REQ-6</code> · Meta-loop and self-improvement.</strong> Every output of a meta-loop (<code class="id">DEF-14</code>) that alters another loop is an action with external effect (<code class="id">DEF-5</code>) and <span class="kw">MUST</span> pass through a gate. Changes to policies, gates, contracts, or the envelope (<code class="id">INV-6</code>) <span class="kw">MUST NOT</span> be executed by a meta-loop; they <span class="kw">MUST</span> pass through a policy-change interface with human authority, versioning, and logging (<code class="id">COR-2</code>). Self-improvement is permitted within the envelope; the envelope cannot modify itself. A meta-loop <span class="kw">MUST NOT</span> alter the gates that govern it (<code class="id">INV-4</code>).</p>
+<h2 id="7-open-workloop">7. Open workloop</h2>
+<p>When the graph crosses the authority boundary:</p>
+<p><strong><code class="id">OPEN-1</code></strong> The operator <span class="kw">MUST</span> apply a deterministic gate to every output arc under its control, treating every output as potentially closing a cycle.</p>
+<p><strong><code class="id">OPEN-2</code></strong> The operator <span class="kw">MUST</span> mark the self-origin of every output: out-of-band metadata where the medium preserves it (email or HTTP headers, trace context, trailers), and an in-band marker where it does not; and <span class="kw">MUST</span> recognize its own marker on input, treating it as a return.</p>
+<p><strong><code class="id">OPEN-3</code></strong> The operator <span class="kw">MUST</span> enforce termination (hop budget, cooldown) and <span class="kw">MUST</span> monitor the medium for recurrence (rate, near-duplicates), because markers do not survive third-party semantic transformation.</p>
+<p><strong><code class="id">OPEN-4</code></strong> The operator <span class="kw">MUST NOT</span> assume end-to-end observability or trust a third-party gate.</p>
+<p><strong><code class="id">OPEN-5</code></strong> Every output from a governed workloop to outside the authority is an open-workloop interface and <span class="kw">MUST</span> comply with <code class="id">OPEN-1</code> through <code class="id">OPEN-4</code>.</p>
+<h2 id="8-conformance">8. Conformance</h2>
+<p><strong><code class="id">CONF-L</code> · Conformant loop.</strong> A loop is conformant when it: exposes a versioned contract (<code class="id">REQ-4</code>); sends every output through a gate (<code class="id">INV-2</code>, <code class="id">INV-3</code>, <code class="id">INV-4</code>); propagates origin and trace (<code class="id">COR-2</code>); makes its actions with external effect idempotent (<code class="id">REQ-3</code>); respects budgets (<code class="id">REQ-1</code>); and can be interrupted through a mechanism independent of the model (<code class="id">REQ-5</code>).</p>
+<p><strong><code class="id">CONF-S</code> · Conformant system.</strong> A governed workloop is conformant when every interface has a gate at all three levels (<code class="id">INV-1</code>, <code class="id">INV-2</code>, <code class="id">DEF-13</code>); the rule classification is published and the envelope defined (<code class="id">INV-5</code>, <code class="id">INV-6</code>); gates evaluate the effective authority of the chain and hierarchy (<code class="id">COR-1</code>); the decision log is complete (<code class="id">COR-2</code>); there is no unmediated shared state (<code class="id">COR-3</code>); every meta-loop complies with <code class="id">REQ-6</code>; and its external interfaces comply with section 7.</p>
+<p><strong><code class="id">CONF-D</code> · Declaration.</strong> "Conformant with Workloop Spec 0.1.0" <span class="kw">MAY</span> be claimed only when all applicable MUSTs are satisfied and verifiable by evidence: gate tests and the gate-decision log.</p>
+<h2 id="9-what-is-not-a-workloop">9. What is not a workloop</h2>
+<p><em>Informative.</em></p>
 <ul>
-<li>Um único loop agêntico, mesmo com hooks. Hooks são gates intra-loop, o precedente direto desta especificação, mas um loop não é workloop.</li>
-<li>Um workflow com ciclo dentro de um único runtime cujos nós não têm gatilho e ciclo de vida próprios (grafo de estados com nós de modelo, pipeline orquestrado). É workflow agêntico.</li>
-<li>Integração orientada a eventos sem arco decidido por modelo (sagas, ETL, automações determinísticas). Pode formar workloop; não é agêntico.</li>
-<li>Loops de terceiros interagindo com os seus sem que você controle a política deles. Não é governado; é workloop aberto (seção 7).</li>
-<li>Uma organização em que o modelo define a própria política. Está fora desta especificação.</li>
+<li>A single agentic loop, even with hooks. Hooks are intra-loop gates and the direct precedent for this specification, but a loop is not a workloop.</li>
+<li>A workflow with a cycle inside a single runtime whose nodes have no independent trigger and lifecycle (a state graph with model nodes, or an orchestrated pipeline). It is an agentic workflow.</li>
+<li>Event-driven integration with no model-decided arc (sagas, ETL, deterministic automations). It may form a workloop; it is not agentic.</li>
+<li>Third-party loops interacting with yours when you do not control their policy. It is not governed; it is an open workloop (section 7).</li>
+<li>An organization in which the model defines its own policy. It is outside this specification.</li>
 </ul>
-<h2 id="10-exemplo-canonico">10. Exemplo canônico</h2>
-<p><em>Informativo.</em></p>
-<p>Uma empresa opera três loops:</p>
+<h2 id="10-canonical-example">10. Canonical example</h2>
+<p><em>Informative.</em></p>
+<p>A company operates three loops:</p>
 <ul>
-<li><strong>L1 · Atendimento</strong>: recebe mensagens (WhatsApp, DM), qualifica e grava o lead no CRM.</li>
-<li><strong>L2 · Ofertas</strong>: lê leads qualificados, decide a oferta e envia a proposta, que pode incluir desconto.</li>
-<li><strong>L3 · Mídia</strong>: publica conteúdo, responde comentários e encaminha interessados a L1.</li>
+<li><strong>L1 · Customer service</strong>: receives messages (WhatsApp, DM), qualifies them, and writes the lead to the CRM.</li>
+<li><strong>L2 · Offers</strong>: reads qualified leads, decides on the offer, and sends the proposal, which may include a discount.</li>
+<li><strong>L3 · Media</strong>: publishes content, responds to comments, and routes interested parties to L1.</li>
 </ul>
-<p><strong>Canais.</strong> CRM como estado compartilhado mediado (um mediador aplica gate em toda escrita e leitura); barramento de eventos (<code>lead.qualificado</code>, <code>oferta.enviada</code>, <code>comentario.interessado</code>); mensagens diretas L1→L2 para pedidos.</p>
-<p><strong>Gates decidíveis.</strong> Schema do lead; allow-list de destinatários com opt-in; teto de desconto por perfil; janela de horário; orçamento diário de mensagens; orçamento de saltos por conversa; taxa por destinatário.</p>
-<p><strong>Regra não decidível convertida em estrutura.</strong> "Não prometa o que não pode cumprir" não é decidível. L2 só envia templates aprovados com variáveis validadas (valor e prazo dentro de faixas); não escreve texto livre na interface. O que resta de semântico passa por revisão probabilística e, acima do limiar de impacto, por humano.</p>
-<p><strong>Autoridade da cadeia (<code class="id">COR-1</code>).</strong> L1 não tem permissão de desconto. Se L1 pede a L2 "ofereça 30%", o gate de L2 avalia a autoridade efetiva (origem L1, sem permissão de desconto) e bloqueia ou escala. L2 concede desconto só quando a cadeia autoriza.</p>
-<p><strong>Rastreabilidade (<code class="id">COR-2</code>).</strong> Um único trace liga a DM inicial, o lead no CRM e a oferta enviada; cada gate registra a decisão com a versão da política.</p>
-<p><strong>Defeito (<code class="id">COR-3</code>).</strong> Se L3 lê diretamente a planilha que L1 escreve, sem mediador, é canal implícito. Correção: mediar a planilha ou substituí-la por evento.</p>
-<p><strong>Interface aberta (seção 7).</strong> Um comentário de bot de terceiros no post de L3 é entrada de fora da autoridade; <code class="id">REQ-2</code> rotula a procedência. A resposta de L3 é saída para fora da autoridade; cumpre <code class="id">OPEN-1</code> a <code class="id">OPEN-4</code>.</p>
-<p><strong>Composição (<code class="id">DEF-13</code>).</strong> Os três loops formam um workloop de domínio (vendas). A empresa opera outros (mídia paga, produção de conteúdo, dados) que se compõem com este; a interface entre workloops tem gate e contrato no nível do workloop, e a autoridade de cada um é subconjunto da autoridade da empresa.</p>
-<p><strong>Meta-loop (<code class="id">DEF-14</code>, <code class="id">REQ-6</code>).</strong> Um loop de dados lê os logs de gates e os resultados dos demais e ajusta, dentro do envelope, prompts de L1, templates ativos de L2 e horários de L3. Ao concluir que o teto de desconto deveria subir, não altera o gate: emite uma proposta para a interface de mudança de política, que um humano aprova e versiona.</p>
-<h2 id="11-relacao-com-trabalhos-anteriores">11. Relação com trabalhos anteriores</h2>
-<p><em>Informativo.</em></p>
+<p><strong>Channels.</strong> The CRM is mediated shared state (a mediator gates every write and read); an event bus (<code>lead.qualified</code>, <code>offer.sent</code>, <code>comment.interested</code>); and direct L1→L2 messages for requests.</p>
+<p><strong>Decidable gates.</strong> Lead schema; recipient allow-list with opt-in; discount cap by profile; time window; daily message budget; hop budget per conversation; rate per recipient.</p>
+<p><strong>A non-decidable rule converted into structure.</strong> "Do not promise what you cannot deliver" is not decidable. L2 sends only approved templates with validated variables (value and time within ranges); it does not write free text at the interface. What remains semantic goes through probabilistic review and, above the impact threshold, a human.</p>
+<p><strong>Chain authority (<code class="id">COR-1</code>).</strong> L1 has no discount permission. If L1 asks L2 to "offer 30%," L2's gate evaluates the effective authority (origin L1, with no discount permission) and blocks or escalates. L2 grants a discount only when the chain authorizes it.</p>
+<p><strong>Traceability (<code class="id">COR-2</code>).</strong> A single trace connects the initial DM, the CRM lead, and the offer sent; each gate records its decision with the policy version.</p>
+<p><strong>Defect (<code class="id">COR-3</code>).</strong> If L3 reads the spreadsheet that L1 writes directly, without a mediator, it is an implicit channel. Correction: mediate the spreadsheet or replace it with an event.</p>
+<p><strong>Open interface (section 7).</strong> A third-party bot comment on L3's post is input from outside the authority; <code class="id">REQ-2</code> labels its provenance. L3's response is an output outside the authority; it complies with <code class="id">OPEN-1</code> through <code class="id">OPEN-4</code>.</p>
+<p><strong>Composition (<code class="id">DEF-13</code>).</strong> The three loops form a sales domain workloop. The company operates others (paid media, content production, data) that compose with this one; the interface between workloops has a gate and a workloop-level contract, and each one's authority is a subset of the company's authority.</p>
+<p><strong>Meta-loop (<code class="id">DEF-14</code>, <code class="id">REQ-6</code>).</strong> A data loop reads gate logs and the results of the other loops and adjusts, within the envelope, L1 prompts, L2 active templates, and L3 schedules. When it concludes that the discount cap should rise, it does not alter the gate: it emits a proposal to the policy-change interface, which a human approves and versions.</p>
+<h2 id="11-relation-to-prior-work">11. Relation to prior work</h2>
+<p><em>Informative.</em></p>
 <ul>
-<li><strong>Hooks de agentes de código</strong> (por exemplo, no Claude Code): código determinístico executado em pontos do ciclo, capaz de bloquear a ação independentemente do que o modelo decidiu. É o gate intra-loop; esta especificação estende a ideia à interface entre loops.</li>
-<li><strong>Policy as code e admission control</strong> (OPA, Cedar, admission controllers do Kubernetes): predicado determinístico avaliado fora do componente governado. Mesmo princípio de separação; aqui aplicado a regra de negócio.</li>
-<li><strong>Service mesh, agent mesh e agent gateways</strong>: política de tráfego, identidade e roteamento entre serviços e agentes. Infraestrutura. Esta especificação trata de política de domínio na interface e é complementar.</li>
-<li><strong>Sistemas multiagente clássicos</strong> (MAS, FIPA): comunicação e coordenação entre agentes. Esta especificação assume modelo opaco e concentra-se em enforcement.</li>
-<li><strong>Prevenção de loops em sistemas distribuídos</strong>: RFC 3834 (respostas automáticas), contagem de saltos em SMTP, detecção de recursão em plataformas serverless, a regra do GitHub Actions para eventos gerados por <code>GITHUB_TOKEN</code>. Precedentes das cláusulas OPEN.</li>
-<li><strong>CaMeL</strong> (Debenedetti et al., 2025): capacidades e políticas determinísticas sobre o fluxo de dados contra injeção de prompt. Precedente de <code class="id">REQ-2</code>.</li>
-<li><strong>Confused deputy e atenuação de capacidades</strong> (Hardy, 1988; modelo de capacidades de objeto). Precedente de <code class="id">COR-1</code>.</li>
+<li><strong>Code-agent hooks</strong> (for example, in Claude Code): deterministic code executed at points in the cycle, capable of blocking an action independently of what the model decided. This is the intra-loop gate; this specification extends the idea to the interface between loops.</li>
+<li><strong>Policy as code and admission control</strong> (OPA, Cedar, Kubernetes admission controllers): a deterministic predicate evaluated outside the governed component. The same separation principle, here applied to business rules.</li>
+<li><strong>Service mesh, agent mesh, and agent gateways</strong>: traffic, identity, and routing policy between services and agents. Infrastructure. This specification addresses domain policy at the interface and is complementary.</li>
+<li><strong>Classical multi-agent systems</strong> (MAS, FIPA): communication and coordination between agents. This specification assumes an opaque model and focuses on enforcement.</li>
+<li><strong>Loop prevention in distributed systems</strong>: RFC 3834 (automatic responses), hop counting in SMTP, recursion detection in serverless platforms, and the GitHub Actions rule for events generated by <code>GITHUB_TOKEN</code>. Precedents for the OPEN clauses.</li>
+<li><strong>CaMeL</strong> (Debenedetti et al., 2025): capabilities and deterministic policies over data flow against prompt injection. Precedent for <code class="id">REQ-2</code>.</li>
+<li><strong>Confused deputy and capability attenuation</strong> (Hardy, 1988; object-capability model). Precedent for <code class="id">COR-1</code>.</li>
 </ul>
-<h2 id="12-nome-licenca-e-citacao">12. Nome, licença e citação</h2>
-<p><strong>Nome.</strong> "Workloop" e "workloop agêntico" são termos do protocolo AISAC (Bruno Bracaioli / B2 Tech). Use livremente, com atribuição a esta especificação. Não há marca registrada sobre o termo.</p>
-<p><strong>Licença.</strong> Este texto está licenciado sob Creative Commons Atribuição 4.0 Internacional (CC BY 4.0). Você pode copiar, redistribuir, adaptar e usar comercialmente, desde que atribua a autoria e indique alterações.</p>
-<p><strong>Como citar.</strong> Bracaioli, B. (2026). <em>Workloop Spec: Especificação do Workloop Agêntico</em> (versão 0.1.0). B2 Tech / protocolo AISAC. DOI: 10.5281/zenodo.22004648. URL canônica: https://workloop.b2tech.io. Repositório: https://github.com/brunobracaioli/workloop-spec.</p>
-<h2 id="13-versionamento-desta-especificacao">13. Versionamento desta especificação</h2>
-<p>Esta especificação segue Semantic Versioning: <strong>MAJOR</strong> para mudança incompatível em definições nucleares (<code class="id">DEF-10</code> a <code class="id">DEF-13</code>) ou no invariante; <strong>MINOR</strong> para novos requisitos ou corolários e ampliações compatíveis; <strong>PATCH</strong> para correções editoriais. Rascunhos usam o sufixo <code>-rcN</code>. Toda mudança é registrada em <code>CHANGELOG.md</code>.</p>
-<h2 id="apendice-a-checklist-de-conformidade">Apêndice A: Checklist de conformidade</h2>
+<h2 id="12-name-license-and-citation">12. Name, license, and citation</h2>
+<p><strong>Name.</strong> "Workloop" and "agentic workloop" are terms of the AISAC protocol (Bruno Bracaioli / B2 Tech). Use them freely with attribution to this specification. The term is not trademarked.</p>
+<p><strong>License.</strong> This text is licensed under the Creative Commons Attribution 4.0 International license (CC BY 4.0). You may copy, redistribute, adapt, and use it commercially, provided that you attribute the authorship and indicate changes.</p>
+<p><strong>How to cite.</strong> Bracaioli, B. (2026). <em>Workloop Spec: Agentic Workloop Specification</em> (version 0.1.0). B2 Tech / AISAC protocol. DOI: 10.5281/zenodo.22004648. Canonical URL: https://workloop.b2tech.io. Repository: https://github.com/brunobracaioli/workloop-spec.</p>
+<h2 id="13-versioning-this-specification">13. Versioning this specification</h2>
+<p>This specification follows Semantic Versioning: <strong>MAJOR</strong> for incompatible changes to core definitions (<code class="id">DEF-10</code> through <code class="id">DEF-13</code>) or the invariant; <strong>MINOR</strong> for new requirements or corollaries and compatible extensions; <strong>PATCH</strong> for editorial corrections. Drafts use the <code>-rcN</code> suffix. Every change is recorded in <code>CHANGELOG.md</code>.</p>
+<h2 id="appendix-a-conformance-checklist">Appendix A: Conformance checklist</h2>
 <table>
 <thead>
 <tr>
 <th>Item</th>
-<th>Cláusula</th>
-<th>Evidência esperada</th>
+<th>Clause</th>
+<th>Expected evidence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Toda interação entre loops ocorre por canal explícito</td>
+<td>Every interaction between loops occurs through an explicit channel</td>
 <td><code class="id">INV-1</code></td>
-<td>Inventário de canais; nenhum acesso direto a estado compartilhado</td>
+<td>Channel inventory; no direct access to shared state</td>
 </tr>
 <tr>
-<td>Toda interface tem gate determinístico</td>
+<td>Every interface has a deterministic gate</td>
 <td><code class="id">INV-2</code></td>
-<td>Mapa de interfaces × gates</td>
+<td>Interface × gate map</td>
 </tr>
 <tr>
-<td>Nenhum gate depende de julgamento de modelo</td>
+<td>No gate depends on model judgment</td>
 <td><code class="id">INV-3</code></td>
-<td>Código dos gates; testes de determinismo</td>
+<td>Gate code; determinism tests</td>
 </tr>
 <tr>
-<td>Gates não contornáveis pelo loop governado</td>
+<td>Gates cannot be bypassed by the governed loop</td>
 <td><code class="id">INV-4</code></td>
-<td>Localização do gate fora do runtime do modelo; ausência de caminho sem gate</td>
+<td>Gate location outside the model runtime; no ungated path</td>
 </tr>
 <tr>
-<td>Regras classificadas; envelope definido</td>
+<td>Rules classified; envelope defined</td>
 <td><code class="id">INV-5</code>, <code class="id">INV-6</code></td>
-<td>Documento de classificação; limites do envelope</td>
+<td>Classification document; envelope limits</td>
 </tr>
 <tr>
-<td>Gates avaliam autoridade efetiva da cadeia</td>
+<td>Gates evaluate effective chain authority</td>
 <td><code class="id">COR-1</code></td>
-<td>Propagação de origem; testes de delegação bloqueada</td>
+<td>Origin propagation; blocked-delegation tests</td>
 </tr>
 <tr>
-<td>Origem e trace propagados; log de decisões completo</td>
+<td>Origin and trace propagated; decision log complete</td>
 <td><code class="id">COR-2</code></td>
-<td>Amostra de trace ponta a ponta; log com versão da política</td>
+<td>End-to-end trace sample; log with policy version</td>
 </tr>
 <tr>
-<td>Nenhum estado compartilhado não mediado</td>
+<td>No unmediated shared state</td>
 <td><code class="id">COR-3</code></td>
-<td>Auditoria de acessos</td>
+<td>Access audit</td>
 </tr>
 <tr>
-<td>Orçamentos de saltos, custo e cooldown</td>
+<td>Hop, cost, and cooldown budgets</td>
 <td><code class="id">REQ-1</code></td>
-<td>Configuração e teste de conversa que excede o orçamento</td>
+<td>Configuration and over-budget conversation test</td>
 </tr>
 <tr>
-<td>Dado separado de instrução; procedência rotulada</td>
+<td>Data separated from instruction; provenance labeled</td>
 <td><code class="id">REQ-2</code></td>
-<td>Schemas de mensagem; rótulos</td>
+<td>Message schemas; labels</td>
 </tr>
 <tr>
-<td>Idempotência e serialização</td>
+<td>Idempotency and serialization</td>
 <td><code class="id">REQ-3</code></td>
-<td>Chaves de idempotência; leases</td>
+<td>Idempotency keys; leases</td>
 </tr>
 <tr>
-<td>Contratos publicados e versionados</td>
+<td>Contracts published and versioned</td>
 <td><code class="id">REQ-4</code></td>
-<td>Contratos por loop</td>
+<td>Contracts by loop</td>
 </tr>
 <tr>
-<td>Interrupção independente do modelo, testada</td>
+<td>Model-independent interruption, tested</td>
 <td><code class="id">REQ-5</code></td>
-<td>Registro do teste de interrupção</td>
+<td>Interruption test record</td>
 </tr>
 <tr>
-<td>Interfaces entre workloops têm gate e contrato no nível do workloop</td>
+<td>Interfaces between workloops have a gate and workloop-level contract</td>
 <td><code class="id">DEF-13</code>, <code class="id">REQ-4</code></td>
-<td>Contratos por workloop; mapa de interfaces entre workloops</td>
+<td>Contracts by workloop; interface map between workloops</td>
 </tr>
 <tr>
-<td>Meta-loops só alteram dentro do envelope; mudanças de política passam pela interface humana</td>
+<td>Meta-loops change only within the envelope; policy changes use the human interface</td>
 <td><code class="id">REQ-6</code></td>
-<td>Log de saídas do meta-loop; registro de mudanças de política com aprovador e versão</td>
+<td>Meta-loop output log; policy-change record with approver and version</td>
 </tr>
 <tr>
-<td>Interfaces externas cumprem <code class="id">OPEN-1</code> a <code class="id">OPEN-4</code></td>
-<td>Seção 7</td>
-<td>Marcação de auto-origem; monitoramento de recorrência</td>
+<td>External interfaces comply with <code class="id">OPEN-1</code> through <code class="id">OPEN-4</code></td>
+<td>Section 7</td>
+<td>Self-origin marking; recurrence monitoring</td>
 </tr>
 </tbody>
 </table>
@@ -372,8 +377,8 @@ footer .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tra
 </div>
 
 <footer><div class="wrap">
-  <div class="cite"><p class="tag">Como citar</p>Bracaioli, B. (2026). <em>Workloop Spec: Especificação do Workloop Agêntico</em> (0.1.0-rc5). B2 Tech / protocolo AISAC. DOI: <a href="https://doi.org/10.5281/zenodo.22004648">10.5281/zenodo.22004648</a>. https://workloop.b2tech.io</div>
-  <p>Texto sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>. "Workloop" e "workloop agêntico" são termos do protocolo AISAC; use livremente, com atribuição. Não há marca registrada sobre o termo.</p>
+  <div class="cite"><p class="tag">How to cite</p>Bracaioli, B. (2026). <em>Workloop Spec: Agentic Workloop Specification</em> (0.1.0-rc5). B2 Tech / AISAC protocol. DOI: <a href="https://doi.org/10.5281/zenodo.22004648">10.5281/zenodo.22004648</a>. https://workloop.b2tech.io</div>
+  <p>Text licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>. "Workloop" and "agentic workloop" are terms of the AISAC protocol; use them freely with attribution. The term is not trademarked.</p>
   <p class="sig">WORKLOOP SPEC · 0.1.0-RC5 · BRUNO BRACAIOLI · B2 TECH · AISAC</p>
 </div></footer>
 <style>.hero{background-image:url("https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-hero.webp")}</style>

@@ -1,19 +1,22 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="{{LANG}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Workloop Spec · Especificação do Workloop Agêntico</title>
-<meta name="description" content="Workloop Spec: especificação do workloop agêntico, sistema de loops agênticos que interagem sob uma autoridade de política, com gate determinístico em toda interface. Protocolo AISAC · B2 Tech.">
+<title>Workloop Spec · {{PAGE_TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
 <meta name="author" content="Bruno Bracaioli">
-<meta property="og:title" content="Workloop Spec · Especificação do Workloop Agêntico">
-<meta property="og:description" content="Autonomia probabilística para pensar. Governança determinística para agir. Termos, invariante, corolários e conformidade do workloop agêntico.">
+<meta property="og:title" content="Workloop Spec · {{PAGE_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-favicon.png">
 <link rel="preload" as="image" href="https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-hero.webp">
-<link rel="canonical" href="https://workloop.b2tech.io">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<link rel="alternate" hreflang="en" href="https://workloop.b2tech.io">
+<link rel="alternate" hreflang="pt-BR" href="https://workloop.b2tech.io/pt-br.html">
+<link rel="alternate" hreflang="x-default" href="https://workloop.b2tech.io">
 <style>
 :root{
   --bg-base:#0a0a0a; --bg-card:#141414; --bg-code:#0d0d0d;
@@ -41,6 +44,8 @@ a:hover,a:focus-visible{border-bottom-color:var(--accent-bright)}
 .topbar .ver{white-space:nowrap}
 .topbar .brand a{color:inherit;border:0}
 .topbar .ver{color:var(--text-dim)}
+.topbar .language{color:var(--text-secondary);text-transform:none;letter-spacing:0}
+.topbar .language a{color:var(--text-secondary);border-bottom-color:var(--border)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .hero{position:relative;overflow:hidden;padding:56px 0 24px;border-bottom:1px solid var(--border);background-color:var(--bg-base);background-repeat:no-repeat;background-position:right center;background-size:62% auto}
 /* veu: escurece a faixa da esquerda, onde o texto cai, e dissolve a arte no rodape */
@@ -121,21 +126,21 @@ footer .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tra
 </style>
 </head>
 <body>
-<div class="topbar"><div class="brand">■ <a href="https://b2tech.io">AISAC · B2 Tech</a></div><div class="ver">{{VER_SHORT}} · Draft</div></div>
+<div class="topbar"><div class="brand">■ <a href="https://b2tech.io">AISAC · B2 Tech</a></div><div class="ver">{{VER_SHORT}} · Draft <span class="language">· {{LANG_SWITCH}}</span></div></div>
 
 <header class="hero"><div class="wrap">
   <p class="eyebrow">Workloop Spec · Request for Comments</p>
   <h1 class="title">Workloop <span>Spec</span></h1>
-  <p class="subtitle">Especificação do Workloop Agêntico</p>
-  <p class="thesis"><span>Autonomia probabilística para pensar.</span> <em>Governança determinística para agir.</em></p>
-  <p class="invariant"><span class="tag">Invariante técnico</span>Liberdade dentro do loop. <b>Gate determinístico em toda interface.</b></p>
+  <p class="subtitle">{{SUBTITLE}}</p>
+  <p class="thesis"><span>{{THESIS_A}}</span> <em>{{THESIS_B}}</em></p>
+  <p class="invariant"><span class="tag">{{INVARIANT_LABEL}}</span>{{INVARIANT}}</p>
 
 
   <dl class="meta">{{META_DL}}</dl>
 </div></header>
 
 <div class="wrap layout">
-  <nav class="toc" aria-label="Sumário"><details id="toc-box" open><summary class="toc-title">Sumário</summary>{{TOC}}
+  <nav class="toc" aria-label="{{TOC_LABEL}}"><details id="toc-box" open><summary class="toc-title">{{TOC_LABEL}}</summary>{{TOC}}
 </details></nav>
   <script>
   /* Sumário vira dropdown no mobile. Roda logo após o elemento, antes da primeira
@@ -151,15 +156,15 @@ footer .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tra
   })();
   </script>
   <article>
-    <div class="def-block"><p class="tag">DEF-11 · Definição nuclear</p><p><strong>Workloop agêntico governado.</strong> Sistema de dois ou mais loops agênticos que interagem por canais explícitos (mensagem, evento ou estado compartilhado mediado), sob uma autoridade de política (a organização que os criou), em que nenhuma interação entre loops e nenhuma ação com efeito externo ocorre sem passar por gate determinístico que impõe as políticas e regras de negócio dessa autoridade.</p></div>
-    <p style="margin:10px 0 36px;color:var(--text-dim);font-size:13px;font-family:var(--mono)">Texto normativo completo abaixo. Este é um rascunho para comentários: abra uma issue no repositório ou responda ao autor.</p>
+    <div class="def-block"><p class="tag">DEF-11 · {{DEFINITION_TAG}}</p><p><strong>{{DEFINITION_LABEL}}.</strong> {{DEFINITION_TEXT}}</p></div>
+    <p style="margin:10px 0 36px;color:var(--text-dim);font-size:13px;font-family:var(--mono)">{{NORMATIVE_NOTE}}</p>
     {{BODY}}
   </article>
 </div>
 
 <footer><div class="wrap">
-  <div class="cite"><p class="tag">Como citar</p>Bracaioli, B. (2026). <em>Workloop Spec: Especificação do Workloop Agêntico</em> ({{VER}}). B2 Tech / protocolo AISAC. DOI: <a href="https://doi.org/10.5281/zenodo.22004648">10.5281/zenodo.22004648</a>. https://workloop.b2tech.io</div>
-  <p>Texto sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>. "Workloop" e "workloop agêntico" são termos do protocolo AISAC; use livremente, com atribuição. Não há marca registrada sobre o termo.</p>
+  <div class="cite"><p class="tag">{{CITATION_LABEL}}</p>{{CITATION}}</div>
+  <p>{{LICENSE_TEXT}} <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>. {{TERMS_TEXT}}</p>
   <p class="sig">WORKLOOP SPEC · {{VER_UPPER}} · BRUNO BRACAIOLI · B2 TECH · AISAC</p>
 </div></footer>
 <style>.hero{background-image:url("https://pub-658f0532396c44dc87cfa3e6be1db82d.r2.dev/workloop/workloop-hero.webp")}</style>
